@@ -99,13 +99,13 @@ export default function About() {
     },
  
   {
-      name: 'Cecilia Bassaw',
+      name: 'Bassaw Cecilia ',
       role: 'Financial Manager',
       specialty: 'Broadcast Journalist',
       image: '/images/Cecilia Bassaw .png',
     },
     {
-      name: 'Leonard Lewis Quainoo',
+      name: 'Quainoo Leonard Lewis ',
       role: 'Marketing Manager',
       specialty: 'Broadcast Journalist',
       image: '/images/lewis.png',
