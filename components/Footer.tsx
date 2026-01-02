@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Your trusted partner for professional printing services and creative media production. Excellence delivered, every time.
+              Your trusted partner for professional printing services and creative media production. <br /><span style={{color:'#EDB70A'}}>Serving You At Ease.</span>
             </p>
             {/* Social Media Icons */}
             <div className="flex gap-3">
@@ -141,7 +141,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">Email</p>
-                  <p className="text-gray-300 text-sm font-medium">info@teejay.com</p>
+                  <p className="text-gray-300 text-sm font-medium">teejaymultimedia.gh@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 group cursor-pointer">
@@ -151,8 +151,8 @@ export default function Footer() {
                 <div>
                   <p className="text-xs text-gray-500 mb-1">Location</p>
                   <p className="text-gray-300 text-sm font-medium">
-                    123 Mumford Street<br />
-                    Ford City, CA 90000
+                  Dankor, Mumford <br />
+                  Gomoa West, Ghana
                   </p>
                 </div>
               </div>

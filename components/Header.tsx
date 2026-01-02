@@ -19,7 +19,9 @@ export default function Header() {
               <span className="block leading-tight text-xl lg:text-2xl" 
               style={{ color: '#E2B813', 
               fontFamily: 'Montserrat', 
+              lineHeight: '1',
               fontWeight: '900' }}>TEE-JAY MULTIMEDIA</span>
+              <span className='text-2xl' style={{fontFamily:'times new roman', fontStyle:'italic'}}>Serving you at ease</span>
             </div>
           </div>
         </Link>
