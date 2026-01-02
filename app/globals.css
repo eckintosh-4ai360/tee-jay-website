@@ -79,8 +79,9 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: var(--font-inter), sans-serif;
+    background-color: #000000;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-montserrat), sans-serif;
@@ -171,5 +172,219 @@
   .yellow-accent {
     @apply text-yellow-400;
   }
+
+  /* Animated Background Elements */
+  .animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    animation: float-orb 20s ease-in-out infinite;
+  }
+
+  .orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #facc15 0%, #eab308 50%, transparent 70%);
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+  }
+
+  .orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #f59e0b 0%, #facc15 50%, transparent 70%);
+    top: 50%;
+    right: -10%;
+    animation-delay: 7s;
+    animation-duration: 25s;
+  }
+
+  .orb-3 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #fbbf24 0%, #f59e0b 50%, transparent 70%);
+    bottom: -10%;
+    left: 30%;
+    animation-delay: 14s;
+    animation-duration: 30s;
+  }
+
+  /* Floating Design Elements */
+  .floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .float-item {
+    position: absolute;
+    color: #facc15;
+    opacity: 0.08;
+    animation: float-random var(--duration, 20s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+  }
+
+  .float-item:nth-child(1) { top: 10%; left: 10%; }
+  .float-item:nth-child(2) { top: 20%; right: 15%; }
+  .float-item:nth-child(3) { top: 60%; left: 5%; }
+  .float-item:nth-child(4) { top: 70%; right: 20%; }
+  .float-item:nth-child(5) { top: 40%; left: 80%; }
+  .float-item:nth-child(6) { bottom: 10%; left: 30%; }
+  .float-item:nth-child(7) { top: 15%; left: 50%; }
+  .float-item:nth-child(8) { bottom: 20%; right: 40%; }
+
+  /* Geometric Shapes */
+  .geometric-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .shape {
+    position: absolute;
+    opacity: 0.06;
+    border: 2px solid #facc15;
+  }
+
+  .shape-1 {
+    width: 100px;
+    height: 100px;
+    top: 15%;
+    right: 10%;
+    animation: rotate-shape 30s linear infinite, float-shape 15s ease-in-out infinite;
+  }
+
+  .shape-2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    left: 15%;
+    border-radius: 50%;
+    animation: rotate-shape 25s linear infinite reverse, float-shape 18s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .shape-3 {
+    width: 120px;
+    height: 120px;
+    bottom: 20%;
+    right: 25%;
+    transform: rotate(45deg);
+    animation: rotate-shape 35s linear infinite, float-shape 20s ease-in-out infinite;
+    animation-delay: 5s;
+  }
+
+  .shape-4 {
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    right: 40%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #facc15;
+    border: none;
+    animation: rotate-shape 20s linear infinite reverse, float-shape 12s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+
+  .shape-5 {
+    width: 90px;
+    height: 90px;
+    bottom: 30%;
+    left: 25%;
+    border-radius: 20px;
+    animation: rotate-shape 28s linear infinite, float-shape 16s ease-in-out infinite;
+    animation-delay: 7s;
+  }
+
+  .shape-6 {
+    width: 70px;
+    height: 70px;
+    top: 25%;
+    left: 40%;
+    border-radius: 50%;
+    animation: pulse-shape 8s ease-in-out infinite, float-shape 14s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+
+  /* Keyframe Animations */
+  @keyframes float-orb {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(50px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-30px, 30px) scale(0.9);
+    }
+  }
+
+  @keyframes float-random {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(30px, -30px) rotate(90deg);
+    }
+    50% {
+      transform: translate(-20px, 20px) rotate(180deg);
+    }
+    75% {
+      transform: translate(40px, 10px) rotate(270deg);
+    }
+  }
+
+  @keyframes rotate-shape {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes float-shape {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-30px) translateX(20px);
+    }
+  }
+
+  @keyframes pulse-shape {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.06;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.1;
+    }
+  }
+
 }
 

@@ -73,7 +73,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900">
+    <div className="min-h-screen bg-black/40">
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center overflow-hidden">
         <div

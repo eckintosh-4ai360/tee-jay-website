@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
           <ThemeProvider defaultTheme="dark">
             <TooltipProvider>
               <Toaster />
+              <AnimatedBackground />
               <div className="flex flex-col min-h-screen">
                 <Header />
                 <main className="flex-1">

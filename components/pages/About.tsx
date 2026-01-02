@@ -2,6 +2,75 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+
+/**
+ * Animated Counter Component
+ * Counts from 0 to target value with easing animation
+ */
+interface AnimatedCounterProps {
+  target: number;
+  suffix?: string;
+  duration?: number;
+}
+
+function AnimatedCounter({ target, suffix = '', duration = 2000 }: AnimatedCounterProps) {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          setIsVisible(true);
+          hasAnimated.current = true;
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const startTime = Date.now();
+    const startValue = 0;
+
+    const animate = () => {
+      const currentTime = Date.now();
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Easing function: starts slow, speeds up (ease-in-cubic)
+      const easedProgress = progress * progress * progress;
+      const currentCount = Math.floor(startValue + (target - startValue) * easedProgress);
+
+      setCount(currentCount);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(target);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [isVisible, target, duration]);
+
+  return (
+    <div ref={counterRef} className="text-5xl font-black text-yellow-400 mb-2">
+      {count}{suffix}
+    </div>
+  );
+}
 
 /**
  * About Page
@@ -42,7 +111,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center overflow-hidden">
         <div
@@ -58,10 +127,12 @@ export default function About() {
           <h1 className="text-6xl md:text-7xl font-black text-white mb-4">
             About <span className="text-yellow-400">TEE-JAY MULTIMEDIA</span>
           </h1>
-          <p className="text-xl text-gray-200 max-w-2xl">
+          <p className="text-2xl text-gray-200 max-w-2xl">
             Your partner in creative excellence and professional media production.
           </p>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></div>
+        <span className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></span>
       </section>
 
       {/* Company Story */}
@@ -195,15 +266,17 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: '500+', label: 'Projects Completed' },
-              { number: '14+', label: 'Years in Business' },
-              { number: '200+', label: 'Happy Clients' },
-              { number: '50+', label: 'Team Members' },
+              { number: 500, suffix: '+', label: 'Projects Completed' },
+              { number: 14, suffix: '+', label: 'Years in Business' },
+              { number: 200, suffix: '+', label: 'Happy Clients' },
+              { number: 50, suffix: '+', label: 'Team Members' },
             ].map((stat, index) => (
               <div key={index} className="bg-gray-900 border border-yellow-400 p-8">
-                <div className="text-5xl font-black text-yellow-400 mb-2">
-                  {stat.number}
-                </div>
+                <AnimatedCounter 
+                  target={stat.number} 
+                  suffix={stat.suffix}
+                  duration={2000}
+                />
                 <p className="text-white font-semibold">{stat.label}</p>
               </div>
             ))}

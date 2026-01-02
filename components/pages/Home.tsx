@@ -172,7 +172,7 @@ export default function Home() {
   }, [testimonialIndex]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <div className="min-h-screen bg-black/40">
       {/* Hero Section with Carousel */}
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
         {/* Carousel Images */}

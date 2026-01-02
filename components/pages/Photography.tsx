@@ -42,7 +42,7 @@ export default function Photography() {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center overflow-hidden">
         <div
