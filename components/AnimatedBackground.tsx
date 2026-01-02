@@ -50,7 +50,7 @@ export default function AnimatedBackground() {
                 '--duration': item.duration,
               } as React.CSSProperties}
             >
-              <Icon size={24} strokeWidth={1.5} />
+              <Icon size={48} strokeWidth={2} />
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -79,35 +80,38 @@ function AnimatedCounter({ target, suffix = '', duration = 2000 }: AnimatedCount
 export default function About() {
   const team = [
     {
-      name: 'John Smith',
-      role: 'Founder & Creative Director',
-      specialty: 'Overall creative vision and strategy',
+      name: 'Smart Joel Simpson',
+      role: 'CEO',
+      specialty: 'Professional media services',
+      image: '/images/Smar,t Joel Simpson.png',
     },
     {
-      name: 'Sarah Johnson',
-      role: 'Lead Photographer',
-      specialty: 'Professional photography and visual storytelling',
+      name: 'Sam Francis',
+      role: 'General Manager',
+      specialty: 'Professional media services',
+      image: '/images/Sam, Francis.png',
     },
     {
-      name: 'Mike Chen',
-      role: 'Videographer & Editor',
-      specialty: 'Video production and post-production',
+      name: 'Degraft Ewusi Johnson Moses',
+      role: 'Team Member',
+      specialty: 'Professional media services',
+      image: '/images/Degraft, Ewusi Johnson Moses.png',
     },
+  {
+      name: 'Cecilia Bassaw',
+      role: 'Financial Manager',
+      specialty: 'Professional media services',
+      image: '/images/Cecilia Bassaw .png',
+    },
+    
     {
-      name: 'Emma Davis',
-      role: 'Print Specialist',
-      specialty: 'Printing services and design consultation',
+      name: 'Brebo Prince',
+      role: 'Marketing Director',
+      specialty: 'Professional media services',
+      image: '/images/Brebo Prince.png',
     },
-    {
-      name: 'Alex Rodriguez',
-      role: 'Production Manager',
-      specialty: 'Project management and client relations',
-    },
-    {
-      name: 'Lisa Anderson',
-      role: 'Graphic Designer',
-      specialty: 'Design and branding solutions',
-    },
+    
+   
   ];
 
   return (
@@ -161,26 +165,26 @@ export default function About() {
       </section>
 
       {/* Mission & Values */}
-      <section className="bg-gray-900 py-20 border-y-2 border-yellow-400">
+      <section className="bg-gray-900/70 py-20 border-y-2 border-yellow-400">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-black text-white mb-12">
             Our <span className="text-yellow-400">Mission & Values</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-black border border-yellow-400 p-8">
+            <div className="bg-black/80 border border-yellow-400 p-8">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">Excellence</h3>
               <p className="text-gray-400">
                 We are committed to delivering the highest quality work on every project, regardless of size or scope.
               </p>
             </div>
-            <div className="bg-black border border-yellow-400 p-8">
+            <div className="bg-black/80 border border-yellow-400 p-8">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">Innovation</h3>
               <p className="text-gray-400">
                 We stay ahead of industry trends and continuously invest in the latest technology and techniques.
               </p>
             </div>
-            <div className="bg-black border border-yellow-400 p-8">
+            <div className="bg-black/80 border border-yellow-400 p-8">
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">Partnership</h3>
               <p className="text-gray-400">
                 We work closely with our clients to understand their vision and deliver solutions that exceed expectations.
@@ -239,7 +243,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="bg-gray-900 py-20 border-y-2 border-yellow-400">
+      <section className="bg-gray-900/70 py-20 border-y-2 border-yellow-400">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-black text-white mb-12">
             Meet Our <span className="text-yellow-400">Team</span>
@@ -249,9 +253,17 @@ export default function About() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-black border border-gray-700 p-8 hover:border-yellow-400 transition-all duration-300"
+                className="bg-black/80 border border-gray-700 p-8 hover:border-yellow-400 transition-all duration-300 group"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-red-600 rounded-lg mb-6"></div>
+                <div className="w-24 h-24 rounded-lg mb-6 overflow-hidden border-2 border-yellow-400 relative transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+                  <Image 
+                    src={member.image} 
+                    alt={member.name}
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-yellow-400 font-semibold mb-3">{member.role}</p>
                 <p className="text-gray-400">{member.specialty}</p>
@@ -271,7 +283,7 @@ export default function About() {
               { number: 200, suffix: '+', label: 'Happy Clients' },
               { number: 50, suffix: '+', label: 'Team Members' },
             ].map((stat, index) => (
-              <div key={index} className="bg-gray-900 border border-yellow-400 p-8">
+              <div key={index} className="bg-gray-900/70 border border-yellow-400 p-8">
                 <AnimatedCounter 
                   target={stat.number} 
                   suffix={stat.suffix}

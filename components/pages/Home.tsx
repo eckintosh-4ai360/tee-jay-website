@@ -250,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* Image Showcase Carousel */}
-      <section className="py-16 bg-white dark:bg-gray-900">
+      <section className="py-16 bg-white/10 dark:bg-gray-900/70">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>

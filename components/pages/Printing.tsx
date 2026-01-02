@@ -78,7 +78,7 @@ export default function Printing() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-900 border border-gray-700 p-8 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl"
+                className="bg-gray-900/70 border border-gray-700 p-8 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl"
               >
                 <div className="w-12 h-12 bg-yellow-400 mb-6"></div>
                 <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
@@ -98,7 +98,7 @@ export default function Printing() {
       </section>
 
       {/* Process Section */}
-      <section className="bg-gray-900 py-20 border-y-2 border-yellow-400">
+      <section className="bg-gray-900/70 py-20 border-y-2 border-yellow-400">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-black text-white mb-12">
             Our <span className="text-yellow-400">Process</span>
@@ -112,7 +112,7 @@ export default function Printing() {
               { step: 4, title: 'Delivery', desc: 'Fast and reliable delivery to your location' },
             ].map((item, index) => (
               <div key={index} className="relative">
-                <div className="bg-black border-2 border-yellow-400 p-8 text-center">
+                <div className="bg-black/80 border-2 border-yellow-400 p-8 text-center">
                   <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl font-black text-black">{item.step}</span>
                   </div>

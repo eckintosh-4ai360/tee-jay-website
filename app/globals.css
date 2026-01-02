@@ -189,23 +189,23 @@
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.15;
+    opacity: 0.35;
     animation: float-orb 20s ease-in-out infinite;
   }
 
   .orb-1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, #facc15 0%, #eab308 50%, transparent 70%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #fde047 0%, #facc15 40%, #eab308 60%, transparent 75%);
     top: -10%;
     left: -10%;
     animation-delay: 0s;
   }
 
   .orb-2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, #f59e0b 0%, #facc15 50%, transparent 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #fbbf24 0%, #f59e0b 40%, #facc15 60%, transparent 75%);
     top: 50%;
     right: -10%;
     animation-delay: 7s;
@@ -213,9 +213,9 @@
   }
 
   .orb-3 {
-    width: 450px;
-    height: 450px;
-    background: radial-gradient(circle, #fbbf24 0%, #f59e0b 50%, transparent 70%);
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, #fde047 0%, #fbbf24 40%, #f59e0b 60%, transparent 75%);
     bottom: -10%;
     left: 30%;
     animation-delay: 14s;
@@ -236,10 +236,11 @@
 
   .float-item {
     position: absolute;
-    color: #facc15;
-    opacity: 0.08;
+    color: #fde047;
+    opacity: 0.25;
     animation: float-random var(--duration, 20s) ease-in-out infinite;
     animation-delay: var(--delay, 0s);
+    filter: drop-shadow(0 0 8px rgba(253, 224, 71, 0.5));
   }
 
   .float-item:nth-child(1) { top: 10%; left: 10%; }
@@ -265,21 +266,22 @@
 
   .shape {
     position: absolute;
-    opacity: 0.06;
-    border: 2px solid #facc15;
+    opacity: 0.15;
+    border: 3px solid #fde047;
+    box-shadow: 0 0 15px rgba(253, 224, 71, 0.3);
   }
 
   .shape-1 {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     top: 15%;
     right: 10%;
     animation: rotate-shape 30s linear infinite, float-shape 15s ease-in-out infinite;
   }
 
   .shape-2 {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     top: 60%;
     left: 15%;
     border-radius: 50%;
@@ -288,8 +290,8 @@
   }
 
   .shape-3 {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     bottom: 20%;
     right: 25%;
     transform: rotate(45deg);
@@ -298,20 +300,20 @@
   }
 
   .shape-4 {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     top: 40%;
     right: 40%;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background-color: #facc15;
-    border: none;
+    background-color: rgba(253, 224, 71, 0.15);
+    border: 3px solid #fde047;
     animation: rotate-shape 20s linear infinite reverse, float-shape 12s ease-in-out infinite;
     animation-delay: 3s;
   }
 
   .shape-5 {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
     bottom: 30%;
     left: 25%;
     border-radius: 20px;
@@ -320,8 +322,8 @@
   }
 
   .shape-6 {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     top: 25%;
     left: 40%;
     border-radius: 50%;
@@ -378,11 +380,11 @@
   @keyframes pulse-shape {
     0%, 100% {
       transform: scale(1);
-      opacity: 0.06;
+      opacity: 0.15;
     }
     50% {
       transform: scale(1.2);
-      opacity: 0.1;
+      opacity: 0.25;
     }
   }
 

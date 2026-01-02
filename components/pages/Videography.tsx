@@ -78,7 +78,7 @@ export default function Videography() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-900 border border-gray-700 p-8 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl"
+                className="bg-gray-900/70 border border-gray-700 p-8 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl"
               >
                 <div className="w-12 h-12 bg-blue-600 mb-6"></div>
                 <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
@@ -98,7 +98,7 @@ export default function Videography() {
       </section>
 
       {/* Production Process */}
-      <section className="bg-gray-900 py-20 border-y-2 border-yellow-400">
+      <section className="bg-gray-900/70 py-20 border-y-2 border-yellow-400">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-black text-white mb-12">
             Production <span className="text-yellow-400">Process</span>
@@ -119,7 +119,7 @@ export default function Videography() {
                 items: ['Video editing', 'Color grading', 'Sound design', 'Motion graphics'],
               },
             ].map((phase, index) => (
-              <div key={index} className="bg-black border border-yellow-400 p-8">
+              <div key={index} className="bg-black/80 border border-yellow-400 p-8">
                 <h3 className="text-2xl font-bold text-yellow-400 mb-4">{phase.title}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {phase.items.map((item, idx) => (
@@ -171,7 +171,7 @@ export default function Videography() {
       </section>
 
       {/* Portfolio Section */}
-      <section className="bg-gray-900 py-20">
+      <section className="bg-gray-900/70 py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-black text-white mb-12">
             Featured <span className="text-yellow-400">Projects</span>
