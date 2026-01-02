@@ -56,7 +56,7 @@ export default function About() {
 
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-6xl md:text-7xl font-black text-white mb-4">
-            About <span className="text-yellow-400">Tee Jay</span>
+            About <span className="text-yellow-400">TEE-JAY MULTIMEDIA</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-2xl">
             Your partner in creative excellence and professional media production.
@@ -72,15 +72,12 @@ export default function About() {
               <h2 className="text-5xl font-black text-white mb-6">
                 Our <span className="text-yellow-400">Story</span>
               </h2>
-              <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                Founded in 2010, Tee Jay Multimedia has been at the forefront of creative services, delivering exceptional results for businesses of all sizes. What started as a small design studio has grown into a full-service creative agency specializing in printing, photography, and videography.
-              </p>
-              <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                Our commitment to excellence, innovation, and customer satisfaction has made us the trusted partner for countless businesses seeking professional creative solutions. We believe in the power of visual storytelling and the impact of quality production.
-              </p>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                Today, we continue to push creative boundaries while maintaining the personalized service and attention to detail that defines our brand.
-              </p>
+              <p className="text-gray-400 text-xl mb-6 leading-relaxed">
+              Tee-Jay Multimedia was registered in June 2018 under the name TEE-JAY MULTIMEDIA. The company later established its physical office in Mumford in August 2020, beginning operations with three working staff and seven management board members.              </p>
+              <p className="text-gray-400 text-xl mb-6 leading-relaxed">
+              Initially, the company specialized in graphic designing and media printing. As the business expanded, Tee-Jay Multimedia grew to include four working staff, three student learners (apprentices), and five management board members, which led to an expansion of its operations into television broadcasting and media advertising, including the use of digital advertising boards and other related platforms.              </p>
+              <p className="text-gray-400 text-xl leading-relaxed">
+              Currently, Tee-Jay Multimedia is located in Mumford, Gomoa West District, Central Region of Ghana, and operates as a full-service media firm. The company provides professional services in advertising, printing of souvenirs, branding and customization, photography, and videography, delivering creative and innovative media solutions to individuals, institutions, and corporate organizations.              </p>
             </div>
             <div
               className="h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-2xl"

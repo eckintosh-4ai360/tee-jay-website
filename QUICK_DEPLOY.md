@@ -46,3 +46,6 @@ Check Vercel logs:
 
 **Remember:** The contact form will work on Vercel just like it works locally, as long as the environment variables are set correctly!
 
+
+
+

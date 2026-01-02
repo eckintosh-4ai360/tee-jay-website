@@ -91,7 +91,7 @@ export default function Contact() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-yellow-400" />
+              {/* <Sparkles className="w-4 h-4 text-yellow-400" /> */}
               <span className="text-yellow-400 text-sm font-semibold">We'd love to hear from you</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
@@ -245,7 +245,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full bg-black/40 border border-gray-600 text-white px-5 py-3.5 rounded-xl focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 focus:outline-none transition-all duration-300 placeholder-gray-500"
-                        placeholder="john@example.com"
+                        placeholder="user@example.com"
                         required
                       />
                     </div>
