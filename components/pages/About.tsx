@@ -82,36 +82,41 @@ export default function About() {
     {
       name: 'Smart Joel Simpson',
       role: 'CEO',
-      specialty: 'Professional media services',
+      specialty: 'Creative Director',
       image: '/images/Smar,t Joel Simpson.png',
+    },
+    {
+      name: 'Degraft Ewusi Johnson Moses',
+      role: 'CO-CEO',
+      specialty: 'Creative Director Assistant',
+      image: '/images/Degraft, Ewusi Johnson Moses.png',
     },
     {
       name: 'Sam Francis',
       role: 'General Manager',
-      specialty: 'Professional media services',
+      specialty: 'Project Manager',
       image: '/images/Sam, Francis.png',
     },
-    {
-      name: 'Degraft Ewusi Johnson Moses',
-      role: 'Team Member',
-      specialty: 'Professional media services',
-      image: '/images/Degraft, Ewusi Johnson Moses.png',
-    },
+ 
   {
       name: 'Cecilia Bassaw',
       role: 'Financial Manager',
-      specialty: 'Professional media services',
+      specialty: 'Broadcast Journalist',
       image: '/images/Cecilia Bassaw .png',
     },
-    
+    {
+      name: 'Leonard Lewis Quainoo',
+      role: 'Marketing Manager',
+      specialty: 'Broadcast Journalist',
+      image: '/images/lewis.png',
+    },
     {
       name: 'Brebo Prince',
-      role: 'Marketing Director',
-      specialty: 'Professional media services',
+      role: 'Marketing Assistant',
+      specialty: 'Project Assistant',
       image: '/images/Brebo Prince.png',
     },
     
-   
   ];
 
   return (

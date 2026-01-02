@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   description: "Professional photography, videography, and printing services in Nigeria. Capture your moments with excellence.",
   keywords: ["photography", "videography", "printing", "multimedia", "Nigeria", "professional photography"],
   authors: [{ name: "Tee Jay Multimedia" }],
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "Tee Jay Multimedia",
     description: "Professional photography, videography, and printing services",
