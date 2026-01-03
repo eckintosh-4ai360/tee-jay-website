@@ -89,14 +89,14 @@
     letter-spacing: -0.02em;
   }
   h1 {
-    @apply text-5xl md:text-6xl font-black;
+    @apply text-4xl sm:text-5xl md:text-6xl font-black;
     font-weight: 900;
   }
   h2 {
-    @apply text-4xl md:text-5xl;
+    @apply text-3xl sm:text-4xl md:text-5xl;
   }
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl sm:text-2xl md:text-3xl;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -127,8 +127,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .flex {
@@ -137,6 +137,13 @@
   }
 
   @media (min-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
@@ -154,19 +161,19 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-yellow-400 text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-yellow-300 hover:shadow-xl hover:scale-105;
+    @apply bg-yellow-400 text-black font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 hover:bg-yellow-300 hover:shadow-xl hover:scale-105 text-sm sm:text-base;
     font-family: var(--font-montserrat), sans-serif;
     letter-spacing: 0.02em;
   }
 
   .btn-secondary {
-    @apply bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl hover:scale-105;
+    @apply bg-blue-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl hover:scale-105 text-sm sm:text-base;
     font-family: var(--font-montserrat), sans-serif;
     letter-spacing: 0.02em;
   }
 
   .service-card {
-    @apply bg-white dark:bg-card border border-gray-200 dark:border-border rounded-2xl p-8 transition-all duration-300 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-1;
+    @apply bg-white dark:bg-card border border-gray-200 dark:border-border rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 transition-all duration-300 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-1;
   }
 
   .yellow-accent {
@@ -194,17 +201,24 @@
   }
 
   .orb-1 {
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     background: radial-gradient(circle, #fde047 0%, #facc15 40%, #eab308 60%, transparent 75%);
     top: -10%;
     left: -10%;
     animation-delay: 0s;
   }
 
+  @media (min-width: 768px) {
+    .orb-1 {
+      width: 600px;
+      height: 600px;
+    }
+  }
+
   .orb-2 {
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     background: radial-gradient(circle, #ffb700 0%, #424242 40%, #facc15 60%, transparent 75%);
     top: 50%;
     right: -10%;
@@ -212,14 +226,28 @@
     animation-duration: 25s;
   }
 
+  @media (min-width: 768px) {
+    .orb-2 {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
   .orb-3 {
-    width: 550px;
-    height: 550px;
+    width: 400px;
+    height: 400px;
     background: radial-gradient(circle, #423d25 0%, #100f0c 40%, #5f584c 60%, transparent 75%);
     bottom: -10%;
     left: 30%;
     animation-delay: 14s;
     animation-duration: 30s;
+  }
+
+  @media (min-width: 768px) {
+    .orb-3 {
+      width: 550px;
+      height: 550px;
+    }
   }
 
   /* Floating Design Elements */
@@ -272,16 +300,23 @@
   }
 
   .shape-1 {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     top: 15%;
     right: 10%;
     animation: rotate-shape 30s linear infinite, float-shape 15s ease-in-out infinite;
   }
 
+  @media (min-width: 768px) {
+    .shape-1 {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
   .shape-2 {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     top: 60%;
     left: 15%;
     border-radius: 50%;
@@ -289,9 +324,16 @@
     animation-delay: 2s;
   }
 
+  @media (min-width: 768px) {
+    .shape-2 {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
   .shape-3 {
-    width: 140px;
-    height: 140px;
+    width: 90px;
+    height: 90px;
     bottom: 20%;
     right: 25%;
     transform: rotate(45deg);
@@ -299,9 +341,16 @@
     animation-delay: 5s;
   }
 
+  @media (min-width: 768px) {
+    .shape-3 {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
   .shape-4 {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     top: 40%;
     right: 40%;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -311,9 +360,16 @@
     animation-delay: 3s;
   }
 
+  @media (min-width: 768px) {
+    .shape-4 {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
   .shape-5 {
-    width: 110px;
-    height: 110px;
+    width: 75px;
+    height: 75px;
     bottom: 30%;
     left: 25%;
     border-radius: 20px;
@@ -321,14 +377,28 @@
     animation-delay: 7s;
   }
 
+  @media (min-width: 768px) {
+    .shape-5 {
+      width: 110px;
+      height: 110px;
+    }
+  }
+
   .shape-6 {
-    width: 90px;
-    height: 90px;
+    width: 65px;
+    height: 65px;
     top: 25%;
     left: 40%;
     border-radius: 50%;
     animation: pulse-shape 8s ease-in-out infinite, float-shape 14s ease-in-out infinite;
     animation-delay: 4s;
+  }
+
+  @media (min-width: 768px) {
+    .shape-6 {
+      width: 90px;
+      height: 90px;
+    }
   }
 
   /* Keyframe Animations */

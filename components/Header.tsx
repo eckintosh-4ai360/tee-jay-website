@@ -10,18 +10,18 @@ export default function Header() {
 
   return (
     <header className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50 border-b-2 border-yellow-400">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div className="container mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
         {/* Logo */}
         <Link href="/">
-          <div className="flex items-center gap-3 cursor-pointer group">
-            <img src="/images/logo.png" alt="Tee Jay Multimedia" className="w-12 h-12 md:w-16 md:h-16" />
-            <div className="hidden md:block">
-              <span className="block leading-tight text-xl lg:text-2xl" 
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer group">
+            <img src="/images/logo.png" alt="Tee Jay Multimedia" className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16" />
+            <div className="block">
+              <span className="block leading-tight text-sm sm:text-base md:text-xl lg:text-2xl" 
               style={{ color: '#E2B813', 
               fontFamily: 'Montserrat', 
               lineHeight: '1',
               fontWeight: '900' }}>TEE-JAY MULTIMEDIA</span>
-              <span className='text-2xl' style={{fontFamily:'times new roman', fontStyle:'italic'}}>Serving you at ease</span>
+              <span className='text-xs sm:text-sm md:text-base lg:text-xl hidden xs:block' style={{fontFamily:'times new roman', fontStyle:'italic'}}>Serving you at ease</span>
             </div>
           </div>
         </Link>
@@ -70,7 +70,7 @@ export default function Header() {
           </Link>
 
           <Link href="/contact">
-            <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-6 py-2.5 rounded-lg hover:from-yellow-300 hover:to-yellow-400 transition-all cursor-pointer shadow-md hover:shadow-lg hover:scale-105">
+            <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold px-4 xl:px-6 py-2 xl:py-2.5 rounded-lg hover:from-yellow-300 hover:to-yellow-400 transition-all cursor-pointer shadow-md hover:shadow-lg hover:scale-105 text-sm xl:text-base">
               Contact Us
             </span>
           </Link>
@@ -87,8 +87,8 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex flex-col gap-3 sm:gap-4">
             <Link href="/">
               <span
                 className="text-gray-700 dark:text-gray-200 font-semibold hover:text-yellow-500 transition-colors block cursor-pointer py-2"

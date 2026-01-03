@@ -67,7 +67,7 @@ function AnimatedCounter({ target, suffix = '', duration = 2000 }: AnimatedCount
   }, [isVisible, target, duration]);
 
   return (
-    <div ref={counterRef} className="text-5xl font-black text-yellow-400 mb-2">
+    <div ref={counterRef} className="text-3xl sm:text-4xl md:text-5xl font-black text-yellow-400 mb-2">
       {count}{suffix}
     </div>
   );
@@ -122,7 +122,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center overflow-hidden">
+      <section className="relative h-72 sm:h-80 md:h-96 flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -132,11 +132,11 @@ export default function About() {
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-6xl md:text-7xl font-black text-white mb-4">
+        <div className="container mx-auto px-3 sm:px-4 relative z-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-3 sm:mb-4">
             About <span className="text-yellow-400">TEE-JAY MULTIMEDIA</span>
           </h1>
-          <p className="text-2xl text-gray-200 max-w-2xl">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl">
             Your partner in creative excellence and professional media production.
           </p>
         </div>
@@ -145,22 +145,22 @@ export default function About() {
       </section>
 
       {/* Company Story */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>
-              <h2 className="text-5xl font-black text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 sm:mb-6">
                 Our <span className="text-yellow-400">Story</span>
               </h2>
-              <p className="text-gray-400 text-xl mb-6 leading-relaxed">
+              <p className="text-gray-400 text-base sm:text-lg md:text-xl mb-4 sm:mb-6 leading-relaxed">
               Tee-Jay Multimedia was registered in June 2018 under the name TEE-JAY MULTIMEDIA. The company later established its physical office in Mumford in August 2020, beginning operations with three working staff and seven management board members.              </p>
-              <p className="text-gray-400 text-xl mb-6 leading-relaxed">
+              <p className="text-gray-400 text-base sm:text-lg md:text-xl mb-4 sm:mb-6 leading-relaxed">
               Initially, the company specialized in graphic designing and media printing. As the business expanded, Tee-Jay Multimedia grew to include four working staff, three student learners (apprentices), and five management board members, which led to an expansion of its operations into television broadcasting and media advertising, including the use of digital advertising boards and other related platforms.              </p>
-              <p className="text-gray-400 text-xl leading-relaxed">
+              <p className="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed">
               Currently, Tee-Jay Multimedia is located in Mumford, Gomoa West District, Central Region of Ghana, and operates as a full-service media firm. The company provides professional services in advertising, printing of souvenirs, branding and customization, photography, and videography, delivering creative and innovative media solutions to individuals, institutions, and corporate organizations.              </p>
             </div>
             <div
-              className="h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-2xl"
+              className="h-64 sm:h-80 md:h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-2xl"
               style={{
                 backgroundImage: 'url(/images/services-showcase.jpg)',
               }}
@@ -170,28 +170,28 @@ export default function About() {
       </section>
 
       {/* Mission & Values */}
-      <section className="bg-gray-900/70 py-20 border-y-2 border-yellow-400">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-black text-white mb-12">
+      <section className="bg-gray-900/70 py-12 sm:py-16 md:py-20 border-y-2 border-yellow-400">
+        <div className="container mx-auto px-3 sm:px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 sm:mb-10 md:mb-12">
             Our <span className="text-yellow-400">Mission & Values</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-black/80 border border-yellow-400 p-8">
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">Excellence</h3>
-              <p className="text-gray-400">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            <div className="bg-black/80 border border-yellow-400 p-5 sm:p-6 md:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3 sm:mb-4">Excellence</h3>
+              <p className="text-gray-400 text-sm sm:text-base">
                 We are committed to delivering the highest quality work on every project, regardless of size or scope.
               </p>
             </div>
-            <div className="bg-black/80 border border-yellow-400 p-8">
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">Innovation</h3>
-              <p className="text-gray-400">
+            <div className="bg-black/80 border border-yellow-400 p-5 sm:p-6 md:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3 sm:mb-4">Innovation</h3>
+              <p className="text-gray-400 text-sm sm:text-base">
                 We stay ahead of industry trends and continuously invest in the latest technology and techniques.
               </p>
             </div>
-            <div className="bg-black/80 border border-yellow-400 p-8">
-              <h3 className="text-2xl font-bold text-yellow-400 mb-4">Partnership</h3>
-              <p className="text-gray-400">
+            <div className="bg-black/80 border border-yellow-400 p-5 sm:p-6 md:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3 sm:mb-4">Partnership</h3>
+              <p className="text-gray-400 text-sm sm:text-base">
                 We work closely with our clients to understand their vision and deliver solutions that exceed expectations.
               </p>
             </div>
@@ -200,13 +200,13 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-black text-white mb-12">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-3 sm:px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 sm:mb-10 md:mb-12">
             Why <span className="text-yellow-400">Choose Us</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {[
               {
                 title: 'Experience',
@@ -233,13 +233,13 @@ export default function About() {
                 desc: 'Dedicated team providing personalized attention and support throughout your project.',
               },
             ].map((item, index) => (
-              <div key={index} className="flex gap-6">
-                <div className="w-12 h-12 bg-yellow-400 flex-shrink-0 flex items-center justify-center">
-                  <span className="text-black font-black text-xl">✓</span>
+              <div key={index} className="flex gap-4 sm:gap-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 flex-shrink-0 flex items-center justify-center">
+                  <span className="text-black font-black text-lg sm:text-xl">✓</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-400">{item.desc}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -248,19 +248,19 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="bg-gray-900/70 py-20 border-y-2 border-yellow-400">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-black text-white mb-12">
+      <section className="bg-gray-900/70 py-12 sm:py-16 md:py-20 border-y-2 border-yellow-400">
+        <div className="container mx-auto px-3 sm:px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 sm:mb-10 md:mb-12">
             Meet Our <span className="text-yellow-400">Team</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-black/80 border border-gray-700 p-8 hover:border-yellow-400 transition-all duration-300 group"
+                className="bg-black/80 border border-gray-700 p-5 sm:p-6 md:p-8 hover:border-yellow-400 transition-all duration-300 group"
               >
-                <div className="w-24 h-24 rounded-lg mb-6 overflow-hidden border-2 border-yellow-400 relative transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg mb-4 sm:mb-6 overflow-hidden border-2 border-yellow-400 relative transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
                   <Image 
                     src={member.image} 
                     alt={member.name}
@@ -269,9 +269,9 @@ export default function About() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-yellow-400 font-semibold mb-3">{member.role}</p>
-                <p className="text-gray-400">{member.specialty}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{member.name}</h3>
+                <p className="text-yellow-400 font-semibold mb-2 sm:mb-3 text-sm sm:text-base">{member.role}</p>
+                <p className="text-gray-400 text-sm sm:text-base">{member.specialty}</p>
               </div>
             ))}
           </div>
@@ -279,22 +279,22 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center">
             {[
               { number: 500, suffix: '+', label: 'Projects Completed' },
               { number: 14, suffix: '+', label: 'Years in Business' },
               { number: 200, suffix: '+', label: 'Happy Clients' },
               { number: 50, suffix: '+', label: 'Team Members' },
             ].map((stat, index) => (
-              <div key={index} className="bg-gray-900/70 border border-yellow-400 p-8">
+              <div key={index} className="bg-gray-900/70 border border-yellow-400 p-4 sm:p-6 md:p-8">
                 <AnimatedCounter 
                   target={stat.number} 
                   suffix={stat.suffix}
                   duration={2000}
                 />
-                <p className="text-white font-semibold">{stat.label}</p>
+                <p className="text-white font-semibold text-sm sm:text-base">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -302,17 +302,17 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-black text-white mb-6">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-3 sm:px-4 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 sm:mb-6">
             Let's Work <span className="text-yellow-400">Together</span>
           </h2>
-          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Ready to bring your creative vision to life? Contact us today to discuss your project.
           </p>
           <Link href="/contact">
-            <button className="btn-primary inline-flex items-center gap-2 text-lg">
-              Get in Touch <ArrowRight size={24} />
+            <button className="btn-primary inline-flex items-center gap-2 text-base sm:text-lg">
+              Get in Touch <ArrowRight size={20} className="sm:w-6 sm:h-6" />
             </button>
           </Link>
         </div>
